@@ -62,7 +62,7 @@ async def welcome(update: Update, context: CallbackContext):
     user_name = new_user.first_name
     image_path = "2025-04-02 00.58.19.jpg"
     img = Image.open(image_path).convert("RGBA")
-    font = ImageFont.truetype("/System/Library/Fonts/Supplemental/Arial Black.ttf", 35)
+    font = ImageFont.load_default()
     draw = ImageDraw.Draw(img)
     #text = f"Welcome {user_name}"
     text = ""
